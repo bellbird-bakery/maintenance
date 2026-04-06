@@ -5,28 +5,15 @@ body:
   - type: input
     id: area
     attributes:
-      label: Area or equipment to clean
-      placeholder: "e.g. Mixer, Oven interiors, Cool room floor, Extraction fan"
+      label: Area or equipment
+      placeholder: "e.g. Mixer, Oven interiors, Cool room floor"
     validations:
       required: true
   - type: textarea
     id: description
     attributes:
-      label: Description
-      description: What needs cleaning and why? Any specific requirements?
-      placeholder: "e.g. The extraction fan above the deck ovens has visible grease buildup."
-    validations:
-      required: true
-  - type: dropdown
-    id: frequency
-    attributes:
-      label: Is this a one-off or recurring task?
-      options:
-        - "One-off"
-        - "Recurring — daily"
-        - "Recurring — weekly"
-        - "Recurring — monthly"
-        - "Recurring — quarterly"
+      label: What needs doing?
+      placeholder: "Describe the cleaning task briefly"
     validations:
       required: true
   - type: dropdown
@@ -34,13 +21,8 @@ body:
     attributes:
       label: Priority
       options:
-        - "Low — schedule when convenient"
-        - "Medium — should be done this week"
-        - "High — needed urgently"
+        - "Low — when convenient"
+        - "Medium — this week"
+        - "High — as soon as possible"
     validations:
       required: true
-  - type: input
-    id: suggested_time
-    attributes:
-      label: Suggested time to do this
-      placeholder: "e.g. End of day Friday, During afternoon shutdown"
