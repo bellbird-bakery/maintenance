@@ -1,0 +1,46 @@
+name: Cleaning Task
+description: Log a cleaning job that needs to be done
+labels: ["cleaning", "submitted"]
+body:
+  - type: input
+    id: area
+    attributes:
+      label: Area or equipment to clean
+      placeholder: "e.g. Mixer, Oven interiors, Cool room floor, Extraction fan"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What needs cleaning and why? Any specific requirements?
+      placeholder: "e.g. The extraction fan above the deck ovens has visible grease buildup."
+    validations:
+      required: true
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: Is this a one-off or recurring task?
+      options:
+        - "One-off"
+        - "Recurring — daily"
+        - "Recurring — weekly"
+        - "Recurring — monthly"
+        - "Recurring — quarterly"
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - "Low — schedule when convenient"
+        - "Medium — should be done this week"
+        - "High — needed urgently"
+    validations:
+      required: true
+  - type: input
+    id: suggested_time
+    attributes:
+      label: Suggested time to do this
+      placeholder: "e.g. End of day Friday, During afternoon shutdown"
