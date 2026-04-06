@@ -1,0 +1,47 @@
+name: Equipment Issue
+description: Report a problem with a piece of bakery equipment
+labels: ["equipment", "submitted"]
+body:
+  - type: input
+    id: equipment
+    attributes:
+      label: Equipment
+      placeholder: "e.g. Deck oven, Spiral mixer, Proofer, Dishwasher"
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      placeholder: "e.g. Main kitchen, Cold room, Wash-up area"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What's wrong?
+      description: Describe the issue. What symptoms are you seeing? When did it start?
+      placeholder: "e.g. The oven is not reaching temperature — stopping at 180°C instead of 240°C."
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - "Low — minor issue, equipment still operational"
+        - "Medium — affecting efficiency or quality"
+        - "High — significantly impacting operations"
+        - "Urgent — equipment down, immediate action needed"
+    validations:
+      required: true
+  - type: input
+    id: noticed_at
+    attributes:
+      label: When did you notice this?
+      placeholder: "e.g. This morning, Yesterday 3pm"
+  - type: textarea
+    id: workaround
+    attributes:
+      label: Any workaround in place?
+      placeholder: "e.g. Using the backup oven for now"
