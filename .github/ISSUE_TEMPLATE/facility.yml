@@ -1,0 +1,40 @@
+name: Facility Issue
+description: Report a building or facility problem
+labels: ["facility", "submitted"]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      placeholder: "e.g. Customer entrance, Staff bathroom, Cold room, Roof"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What's wrong?
+      description: Describe the issue. Include any visible damage or signs of deterioration.
+      placeholder: "e.g. The cold room door seal is torn and the room is not holding temperature."
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - "Low — cosmetic or minor, no operational impact"
+        - "Medium — affecting comfort or efficiency"
+        - "High — affecting operations or compliance"
+        - "Urgent — immediate risk to operations or safety"
+    validations:
+      required: true
+  - type: input
+    id: noticed_at
+    attributes:
+      label: When did you notice this?
+      placeholder: "e.g. This morning, Last week"
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      placeholder: "Any photos, measurements, or other details"
