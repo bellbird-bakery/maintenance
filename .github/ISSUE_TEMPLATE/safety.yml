@@ -1,42 +1,26 @@
 name: Safety Concern
-description: Report a safety hazard or risk — urgent issues should be reported verbally first
+description: Report a safety hazard — if there is immediate danger, tell a manager first
 labels: ["safety", "submitted", "priority: urgent"]
 body:
   - type: markdown
     attributes:
-      value: |
-        > **If there is an immediate danger to people, do not wait — tell a manager now.**
-        > Use this form to create a written record after alerting staff.
+      value: "**If there is immediate danger, tell a manager now. Use this form to create a written record.**"
   - type: input
     id: location
     attributes:
       label: Location
-      placeholder: "e.g. Kitchen floor near sink, Loading dock, Walk-in freezer"
+      placeholder: "e.g. Kitchen floor, Loading dock"
     validations:
       required: true
   - type: textarea
     id: description
     attributes:
-      label: Describe the hazard
-      description: What is the risk? Who could be affected?
-      placeholder: "e.g. Wet floor near the dishwasher with no wet floor sign — slip hazard."
+      label: What is the hazard?
+      placeholder: "Describe the risk briefly"
     validations:
       required: true
-  - type: checkboxes
-    id: immediate_risk
-    attributes:
-      label: Immediate risk
-      options:
-        - label: This hazard poses an immediate risk to people or property
   - type: textarea
     id: action_taken
     attributes:
       label: Action already taken
-      placeholder: "e.g. Area cordoned off, Manager notified, Spill cleaned up"
-  - type: input
-    id: noticed_at
-    attributes:
-      label: When did you notice this?
-      placeholder: "e.g. Just now, This morning at 7am"
-    validations:
-      required: true
+      placeholder: "e.g. Area cordoned off, Manager notified"
